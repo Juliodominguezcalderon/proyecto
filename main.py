@@ -16,4 +16,6 @@ print("Resumen estadístico de las columnas: \n")
 print(historico_acciones.describe())
 
 #Visualizamos los datos
-proyecto.visualización.graficar_acciones(historico_acciones)
+proyecto.visualización.graficar_historico(historico_acciones)
+
+proyecto.visualización.graficar_histograma(historico_acciones)
