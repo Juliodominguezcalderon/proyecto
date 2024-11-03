@@ -1,0 +1,20 @@
+import yfinance as yf
+import pandas as pd
+
+
+acciones = ["AAPL","MSFT","GOOG","NVDA"] #Definimos las acciones objeto de analisis
+inicio = "2004-1-1" # Definimos la fecha de inicio para analisis de las acciones
+fin = "2023-12-31"  # Definimos la fecha final del analsis de las acciones
+
+
+historicos=[] #creamos uns lista vacia
+for accion in acciones:
+    historico = yf.download(accion, start=inicio,end=fin)
+    historico = historico.reset_index()
+    
+    historicos.append(historico)
+    historico["Tickers"] = accion
+    historico.to_csv(f'{accion}.csv', index=False)
+historicos = pd.concat(historicos, ignore_index=True)
+
+historicos.to_csv('your_file_todas.csv', index=False)

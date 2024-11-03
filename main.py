@@ -9,5 +9,11 @@ fin = "2023-12-31"  # Definimos la fecha final del analsis de las acciones
 #Traemos los datos extraídos
 historico_acciones = proyecto.extracción.extraer_datos(acciones, inicio, fin)
 
+# Vista rápida de datos:
+print("Información general de las columnas: \n")
+print(historico_acciones.info(), "\n")
+print("Resumen estadístico de las columnas: \n")
+print(historico_acciones.describe())
+
 #Visualizamos los datos
 proyecto.visualización.graficar_acciones(historico_acciones)
