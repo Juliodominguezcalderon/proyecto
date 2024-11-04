@@ -10,4 +10,5 @@ def extraer_datos(acciones, inicio, fin):
         hist_por_accion["Ticker"] = accion
         datos_historicos.append(hist_por_accion)
     consolidado = pd.concat(datos_historicos, ignore_index=True) #Creamos un nuevo dataframe con los historicos de las acciones y se crea un nuevo índice.
+    consolidado.to_csv('consolidado_acciones.csv')
     return(consolidado)

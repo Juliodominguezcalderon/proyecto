@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-acciones = ["AAPL","MSFT","GOOG","NVDA"] #Definimos las acciones objeto de analisis
-
+acciones = ["AAPL","MSFT","GOOG","NVDA"] 
+   
 def graficar_historico(consolidado_acciones):  
     for accion in acciones:
         datos_accion = consolidado_acciones[consolidado_acciones['Ticker'] == accion]
