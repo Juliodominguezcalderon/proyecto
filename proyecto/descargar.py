@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-def extraer_datos(acciones, inicio, fin):
+def descargar_datos(acciones, inicio, fin):
     datos_historicos =[] #creamos uns lista vacia
     for accion in acciones:
         hist_por_accion = yf.download(accion, start=inicio,end=fin)

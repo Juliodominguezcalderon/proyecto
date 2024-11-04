@@ -1,3 +1,3 @@
 # __init__.py
-import proyecto.extracción as extracción
+import proyecto.descargar as descargar
 import proyecto.visualización as visualización
